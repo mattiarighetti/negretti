@@ -1,0 +1,1049 @@
+/*TABELLE in generale*/
+.tabella {
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 980px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border-color: #e5e5e5 #dbdbdb #d2d2d2;
+    box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    font-family: "Oxygen", serif;
+}
+.login {
+    background-color: white;
+    border: 1px solid #ddd; 
+    width: 980px; 
+    margin: 0 auto; 
+    border-radius: 8px;
+    border-color: #e5e5e5 #dbdbdb #d2d2d2;
+    box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    font-family: "Happy Monkey", cursive;
+}
+.sub { 
+    font-family: "Titillium Web", sans-serif; 
+    font-size: 35px; 
+    text-align: center; 
+    color:#58585A;
+}     
+.punto { 
+    font-family: "Titillium Web", sans-serif; 
+    font-size: 18px; 
+    text-align: left;
+    padding-left: 120px;
+}
+select{ 
+    width: 100%;    
+    border: 1;  
+    font-size: 0.9em; 
+}
+.input {
+    width: 100%;
+    border: none;
+    font-size: 1.4em;
+}
+.bot {
+    border:overset;
+}
+.logo {
+    font-family: 'Special Elite', cursive;
+    font-size: 4em;
+}
+.bg {
+    height:auto;
+    left:0;
+    min-height:100%;
+    min-width:1024px;
+    position:fixed;
+    top:0;
+    width:100%;
+    background-size: cover;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    filter:alpha(opacity=70);
+    -moz-opacity:.70;
+    opacity:.70; 
+}
+.ritratto {
+    border-radius: 15px;
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+}
+
+/*Tendina comparsa per la trama */
+#dhtmlgoodies_contentBox {
+  border:1px solid #09A519;
+  height:0px;
+  visibility:hidden;
+  position:absolute;
+  background-color:#CFECD2;
+  overflow:auto;
+  padding:2px;
+  width:970px;
+  -moz-border-radius:7px 7px 7px 7px;
+  -webkit-border-radius:7px 7px 7px 7px;
+  border-radius:7px 7px 7px 7px;
+}
+#dhtmlgoodies_content {
+  position:relative;  
+  font-family: Radley, serif;
+  width:100%;
+  font-size:0.95em;
+}
+#dhtmlgoodies_slidedown {
+    position:relative;
+    width:200px;
+}
+
+/*BREADCRUMBS anche conosciuto come CONTEXT*/
+#context { 
+    background-color:white;
+    border: 1px solid #ddd; 
+    width: 980px;
+    margin: 0 auto; 
+    box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    border-color: #e5e5e5 #dbdbdb #d2d2d2;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    border-radius: 8px; 
+    font-family: "PT Sans Caption", serif;
+}
+#context ol#sezione { 
+    background: none; 
+    float: none; 
+    height: 3em; 
+    line-height: 3em; 
+    font-size: 15px; 
+    color: #666; 
+    margin: 0; 
+    list-style: none; 
+    font-weight: bold; 
+    text-shadow: 0 5px 0 #fff; 
+} 
+#context ol#sezione li { 
+    background: none; 
+    float: left; 
+    margin: 0; 
+    padding: 0 0 0 1em; 
+} 
+#context ol#sezione li a { 
+    float: left; 
+    color: #666; 
+    text-decoration: none; 
+    padding: 0 1.75em 0 0; 
+    margin-left: 0px; 
+    background: url(images/context_separator.png) no-repeat 100% 50%; 
+} 
+#context ol#sezione li a:hover { 
+    color: #333; 
+    text-decoration: none; 
+}   
+#context ol#sezione li.home { 
+    background: none; 
+    margin: 0; 
+    padding: 0;
+} 
+#context ol#sezione li.home a { 
+    background: url(images/context_home.jpg) no-repeat 1.25em 50%; 
+    background-size: 30px 90px;
+    margin: 0; 
+    padding: 0 0 0 1.25em; 
+    width: 30px;
+    text-indent: -9999px; 
+    overflow: hidden; 
+} 
+#context ol#sezione li.home a:hover { 
+    background-image: url(images/context_hover.jpg); 
+    background-size: 30px 90px;
+}
+
+/*form.css*/
+.form-widget-error, .form-required-mark, .form-error {
+    color: #c30000;
+}
+.form-label-error {
+    font-weight: bold;
+    background-color: #ffaaaa;
+    text-align: right;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 90%;
+}
+.form-fieldset {
+    border: 0px solid #000;
+}
+.margin-form .form-required-mark {
+    display: inline;
+}
+.margin-form .form-item-wrapper {
+    clear: both;
+    padding: 5px;
+}
+.margin-form .form-item-wrapper .form-label {
+    float: left;
+    text-align: right;
+    display: block;
+    width: 25%;
+    background-color: #e9e9e9;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: "ABeeZee", serif;
+    font-size: 100%;
+}
+.margin-form .form-item-wrapper .form-widget, .margin-form .form-button, .margin-form div.form-help-text {
+    display: block;
+    margin-left: 17em;
+}
+.margin-form .form-button {
+    margin-top: 1em;
+}
+.margin-form .form-item-wrapper .form-error, .margin-form .form-item-wrapper .form-widget-error {
+    display: block;
+    margin-left: 17em;
+}
+.margin-form legend span { 
+    display: block;
+}
+.vertical-form .form-required-mark {
+    display: inline;
+}
+.vertical-form .form-item-wrapper {
+    clear: both;
+    padding: 8px;
+}
+.vertical-form .form-item-wrapper .form-label{
+    text-align: left;
+    display: block;
+
+}
+.vertical-form .form-item-wrapper .form-widget{
+    display: inline;
+}
+.inline-form div {
+    display: inline;
+}
+.margin-form-div .form-item-wrapper {
+    padding-bottom: 10px;
+}
+.margin-form-div h1 {
+    margin-left: 13.5em;
+}
+
+/*list.css*/
+div.list-button-bar-top {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+div.list-button-bar-bottom {
+    padding-top: 10px;
+}
+table.list-table {
+    border-collapse: separate;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+table.list-tiny {
+    font-size: x-small;
+    border-collapse: collapse;
+}
+.list-table tr.list-header {
+    background-color: #ffffff;
+}
+th.list-table, th.list-table-narrow, .list-table th {
+    padding: 8px 8px;
+    border-bottom: 3px solid #A0BDEB;
+}
+.list-table tr.even, .list-tiny tr.even {
+    background-color: #fff;
+}
+.list-table tr.odd, .list-tiny tr.odd {
+    background-color: #f0eff0;
+} 
+td.list-table, td.list-table-narrow, .list-table td {
+    padding: 1px 4px;
+    border-bottom: 1px solid #a0bdeb;
+}
+td.list-table-narrow, th.list-table-narrow {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+tr.list td {
+  border-bottom: 3px solid #a0bdeb;
+} 
+/* pagination ------------------------------------------ */
+div.list-paginator-top {
+ padding-bottom: 5px;
+}
+div.list-paginator-bottom {
+    padding-top: 15px;
+}
+.list-paginator li {
+    padding:5px;
+}
+.list-paginator li {
+    border: 1px solid #f00;
+    background-color: white;
+    padding: 2px 4px;
+    font-weight: bold;
+    border: 1px solid #FFF;
+}
+.list-paginator li a:hover {
+    background-color: #e5e5e5;
+}
+.list-paginator li.current {
+    background-color: #e5e5e5;
+    border: 1px solid #999;
+}
+/* end pagination ------------------------------------------ */
+/* list-filter ------------------------------------------ */
+td.list-filter-pane {
+    background-color: #eee;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    width: 200px;
+}
+.list-filter-header {
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family:"Dosis", sans-serif;
+}
+.list-filter { 
+    font-size: 13px;
+    padding-left:10px;
+    text-decoration: none;
+}
+tr.list-filter-selected { 
+    background-color: #bbbbbb;
+}
+span.list-filter-selected { 
+    font-weight: bold;
+}
+.list-filter-section { 
+    font-size: x-small; 
+    font-weight: bold; 
+    background-color: #bbbbff; 
+    padding-left: 4px; 
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    margin-top: 0px; 
+    margin-bottom: 8px;
+}
+div.list-inline-filter { 
+    font-size: x-small; 
+}
+span.list-inline-filter { 
+}
+span.list-inline-filter-selected { 
+    font-weight: bold;
+}
+a.list-inline-filter { 
+}
+td.list-list-pane {
+    background-color: white;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+/*site-master.css*/
+/* Styles originally defined in default-master.css */
+#login-box {
+    border: black 1px solid;
+    padding: 4px;
+}
+TABLE.table-display {
+    font-family: tahoma, verdana, helvetica; 
+    font-size: 85%;
+}
+TR.table-header {
+  background-color: #cccccc; 
+}
+TR.even {
+  background-color: #f0f0f0;
+}
+TR.odd {
+  background-color: #e0e0e0;
+}
+/* Replace deprecated center tags in forms. Eventually all forms should use form builder and this tag should not be used */
+DIV.submit-button {
+  text-align: center;
+}
+/**********************************************************************
+/* Site-Wide/Master Templates
+/**********************************************************************/
+#skiptocontent {
+  display: none;
+}
+.block-marker {display: none;}
+/* User Messages */
+#alert-message {
+  background-color: #ccff99; 
+  padding: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 85%;
+}
+#alert-message .alert {
+  margin-left: 0;
+  padding-left: 2px;
+  border: none;
+}
+/* Boxed User Message */
+.boxed-user-message {
+  background-color: #ccff99; 
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 85%;
+  border: 1px solid #dd9988;
+}
+.boxed-user-message h3 {
+  color: #990000;
+  margin-top: 0px;
+}
+.boxed-user-message .body {
+  color: #990000;
+}
+/* Subsite Name */
+#subsite-name { 
+  font-weight: bold; 
+  font-size: 120%;
+  font-family: verdana; 
+  padding-left: 8px;
+}
+a.subsite-name {
+  color: black;
+  text-decoration: none;
+}
+a.subsite-name:hover {
+  color: black;
+  text-decoration: none;
+}
+/* Site Footer */
+#footer {
+  clear: both;
+  border-top: 1px solid #ccc;
+  font-family: tahoma, verdana, helvetica, sans-serif;
+  font-size: 85%;
+  margin-top: 24px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+}
+#footer ul {
+  display: inline;
+  margin-left: 0;
+  padding-left: 0;
+  border: none;
+}
+#footer ul li {
+  margin-left: 0;
+  padding-left: 10px;
+  border: none;
+  list-style: none;
+  display: inline;
+}
+#footer .action-list {
+  float: left;
+}
+/**********************************************************************
+/* General navigation
+/**********************************************************************/
+/* First level tabs */
+#navbar-div {
+  border-bottom: 1px solid #666;
+}
+#navbar-container {
+  height: 35px;
+  position: relative;
+}
+#navbar { 
+  position: absolute;
+  height: 21px;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  left: 10px;
+  bottom: -2px;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 80%;
+  font-weight: bold;
+}
+html>body #navbar { bottom: 0px }
+#navbar .tab { 
+  height: 16px;
+  float: left; 
+  background-color: #eeeeee; 
+  border: 1px solid #666;
+  padding: 2px 5px 2px 5px;
+  margin: 0px 2px 0px 2px;
+}
+#navbar a {
+  text-decoration: none;
+  color: black;
+}
+#navbar a:hover {
+  text-decoration: underline;
+}
+#navbar #navbar-here { 
+  border-bottom-color: white;
+  background-color: white;
+}
+#navbar #navbar-here a {
+  color: black;
+}
+#navbar-body { 
+  border-bottom: 1px solid #016799;
+  background-color: white;
+  clear: both;
+  padding-top: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+/* Second level tabs */
+#subnavbar-div {
+  border-bottom: 1px solid #666;
+}
+#subnavbar-container {
+  height: 35px;
+  width: 742px;
+  position: relative;
+}
+#subnavbar {
+  position: absolute;
+  width: 720px;
+  height: 21px;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  right: 0px;
+  bottom: -2px;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 80%;
+  font-weight: bold;
+}
+html>body #subnavbar { bottom: 0px }
+#subnavbar .tab { 
+  height: 16px;
+  float: left; 
+  background-color: #eeeeee; 
+  border: 1px solid #666;
+  padding: 2px 5px 2px 5px;
+  margin: 0px 2px 0px 2px;
+}
+#subnavbar a {
+  text-decoration: none;
+  color: black;
+}
+#subnavbar a:hover {
+  text-decoration: underline;
+}
+#subnavbar #subnavbar-here { 
+  border-bottom-color: white;
+  background-color: white;
+}
+#subnavbar #subnavbar-here a {
+  color: black;
+}
+#subnavbar-body { 
+  border-bottom: 1px solid #016799;
+  border-left: 1px solid #016799;
+  border-right: 1px solid #016799;
+  background-color: white;
+  clear: both;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+/* END NAVIGATION */
+/**********************************************************************
+/* Widgets
+/**********************************************************************/
+/* STANDARD TAGS -----------------------------------------------------------*/
+/* standard html (body, h1, p, form...) */
+body {
+    background-color: #F1F1F1;
+    margin:5px 5px 0px 5px;
+    padding:0;
+    font:small/1.5em Tahoma, "Lucida Grande", sans-serif; voice-family: "\"}\""; voice-family:inherit;
+} 
+h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #58585A;
+    margin-bottom: 40px;
+    text-align:center;
+    font-family: "Special Elite", cursive;
+}
+h2 {
+    font-size: 1.1em;
+    font-weight:bold;
+    color: #555555;
+    margin-bottom: 12px;
+}
+h3 {
+    font-size: 1.05em;
+    font-weight:bold;
+    color: #444444;
+    margin-bottom: 12px;
+}
+h4 {
+    font-size: 1.00em;
+    font-weight:bold;
+    color: #444444;
+    margin-bottom: 12px;
+}
+a:link {
+    color: #333;
+    text-decoration:none;
+}
+a:visited {
+    color: #333;
+}
+a:hover {
+    color: #08c;
+    text-decoration: underline;
+}
+
+/* BUTTON ---- */
+a.button { 
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    display: inline;
+    text-shadow: 0px 1px 1px #fff;
+    line-height: 18px;
+    cursor: auto;
+    font-size: 1.1em;
+    font-family: "Oxygen", serif;
+    border: solid 1px #ccc;
+    background-color: #EEE;
+    text-align: center; 
+    padding: 1px 15px 3px 16px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+a.button:link { 
+  text-decoration: none;
+  border: solid 1px #ccc;
+}
+a.button:hover { 
+  text-decoration: none;
+  background-color: #CCC;
+  border: solid 1px #ccc;
+}
+a.button:active { 
+  text-decoration: none;
+  border: solid 1px #08c;
+}
+/* END BUTTON ---- */
+
+.center {text-align: center;}
+.small {font-size: x-small;}
+/*  ARE THESE NEEDED ??? -----------------------------------------------------------*/
+/* Various forms of links */
+.action-list { 
+  padding: 0;
+}
+.action-list ul { 
+  margin: 0;
+  padding: 0;
+  display: inline;
+  border: none;
+}               
+.action-list ul li {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  display: inline;
+}
+div.subsite-context-bar {
+  font-size: 85%;
+  margin-bottom: 4px;
+  position: relative;
+}
+a.admin-button { 
+  font: 85% arial;
+  border: solid 1px black;
+  background-color: #aaa;
+  text-align: center; 
+  padding: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.admin-button:link { 
+  text-decoration: none;
+  border: solid 1px black;
+  color: #111;
+}
+a.admin-button:visited { 
+  text-decoration: none;
+  border: solid 1px black;
+}
+a.admin-button:hover { 
+  text-decoration: none;
+  background-color: #ccc;
+  border: solid 1px black;
+}
+a.admin-button:active { 
+  text-decoration: none;
+  border: solid 1px black;
+}
+a.admin:link, a.admin:visited {
+  color: #f00;
+  font-family: verdana;
+  font-size: 11px;
+  font-weight: normal;
+}
+a.admin:hover { 
+  color: #fff; 
+  background: #f00;
+}
+.highlight { 
+  background-color: #ffc; 
+}
+ul.action-links li {
+  list-style: circle url(/resources/acs-subsite/action-link-marker.png);
+  margin: 8px;
+  margin-left: -16px;
+}
+/*  END ARE THESE NEEDED -----------------------------------------------------------*/
+/* END STANDARD TAGS ---------------------------------------------------------------*/
+/* HEADER TAGS ---------------------------------------------------------------------*/
+#header {
+  font-size: 0.92em;
+  background-color: #EFEFEF;
+  color: #444444;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#system-name {
+  font-size: 1.4em;
+  font-weight: bold;
+  float: left;
+  padding-left: 0.2em;
+}
+#system-name a {
+  color: #333333;
+  text-decoration: none;
+}
+#header-navigation {
+  float: right;
+  padding-right: 0.4em;
+}
+/* END CONTEXT BAR ---- */ 
+/* END HEADER TAGS -----------------------------------------------------------*/
+/* LISTS -----------------------------------------------------------*/
+ul.compact, .action-list ul{
+  margin: 0px;
+  padding: 0px;
+}
+ul.compact li, .action-list ul li {
+  list-style:none;
+  display: inline;
+}
+/* END OF LISTS */
+/* Portlets */
+.portlet h2 {
+  background: #dddddd; 
+  padding: 2px 8px 2px 8px; 
+  margin: 0;
+}
+.portlet-header {
+  background: #dddddd; 
+}
+.portlet-header h2 {
+  padding: 2px 8px 2px 8px; 
+  margin: 0;
+}
+.portlet-sidebar {
+  width: 30%;
+}
+.portlet .portlet-body {
+  border: 1px dotted #999; 
+  border-top: 0px; 
+  padding: 6px 8px 6px 8px;
+}
+/* Generally Available Tabs */
+#tabs-div {
+  border-bottom: 1px solid #666;
+}
+#tabs-container {
+  height: 15px;
+  position: relative;
+}
+#tabs { 
+  position: absolute;
+  height: 21px;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  left: 10px;
+  bottom: -2px;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 80%;
+  font-weight: bold;
+}
+html>body #tabs { bottom: 0px }
+#tabs .tab { 
+  height: 16px;
+  float: left; 
+  background-color: #cccccc;
+  border: 1px solid #666;
+  padding: 2px 5px 2px 5px;
+  margin: 0px 2px 0px 2px;
+}
+#tabs .disabled { 
+  color: #999999;
+}
+#tabs a {
+  text-decoration: none;
+  color: black;
+}
+#tabs a:hover {
+  text-decoration: underline;
+}
+#tabs #tabs-here { 
+  border-bottom-color: #f6f6f6;
+  background-color: #f6f6f6;
+}
+#tabs #tabs-here a {
+  color: black;
+}
+#tabs-body { 
+  border-bottom: 1px solid #016799;
+  background-color: #f6f6f6;
+  clear: both;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/**********************************************************************
+/* acs-developer-support Toolbar
+/**********************************************************************/
+/* LARS: This ought to go in the developer-support package, somehow */
+#developer-toolbar {
+  background-color: #616093;
+  color: white;
+  font-family: tahoma, verdana;
+  font-size: 80%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#developer-toolbar td a { 
+  border: solid 1px #616093;
+  text-align: center; 
+  color: white;
+  text-decoration: none;
+}
+#developer-toolbar td a:hover { 
+  text-decoration: none;
+  background-color: #999999;
+  border: solid 1px #cccccc;
+}
+#developer-toolbar #search {
+  font: 80% tahoma;
+  color: white;
+}
+#developer-toolbar #search input {
+  font: 100% tahoma;
+}
+#developer-toolbar td a.on {
+  background-color: #888888;
+  border: solid 1px #cccccc;
+}
+#developer-toolbar td a:hover.on {
+  background-color: #666666;
+  border: solid 1px #999999;
+}
+/* Developer-support footer */
+.developer-support-footer {
+  float: left;
+  padding: 6px;
+  border: solid 1px gray;
+  background-color: #e1e1e1;
+  margin-top: 4px;
+}
+/* Title of page, typically used on an H1 tag */
+.page-title {
+}
+/**********************************************************************
+/* DEPRECATED CLASSES
+/**********************************************************************/
+/* Deprecated, not sure what it's replaced with just yet */
+a.action {
+  margin: 8px;
+  margin-left: 24px;
+  display: list-item;
+  list-style: circle url(/resources/acs-subsite/right.gif);
+}
+
+/*default-site.css*/
+/* Calendar widget css */
+/* The main calendar widget.  DIV containing a table. */
+div.calendar { position: relative; }
+.calendar, .calendar table {
+  border: 1px solid #556;
+  font-size: 11px;
+  color: #000;
+  cursor: default;
+  background: #eef;
+  font-family: tahoma,verdana,sans-serif;
+}
+/* Header part -- contains navigation buttons and day names. */
+.calendar .button { /* "<<", "<", ">", ">>" buttons have this class */
+  text-align: center;    /* They are the navigation buttons */
+  padding: 2px;          /* Make the buttons seem like they're pressing */
+}
+.calendar thead .title { /* This holds the current "month, year" */
+  font-weight: bold;      /* Pressing it will take you to the current date */
+  text-align: center;
+  background: #fff;
+  color: #000;
+  padding: 2px;
+}
+.calendar thead .headrow { /* Row <TR> containing navigation buttons */
+  background: #778;
+  color: #fff;
+}
+.calendar thead .daynames { /* Row <TR> containing the day names */
+  background: #bdf;
+}
+.calendar thead .name { /* Cells <TD> containing the day names */
+  border-bottom: 1px solid #556;
+  padding: 2px;
+  text-align: center;
+  color: #000;
+}
+.calendar thead .weekend { /* How a weekend day name shows in header */
+  color: #a66;
+}
+.calendar thead .hilite { /* How do the buttons in header appear when hover */
+  background: #aaf;
+  color: #000;
+  border: 1px solid #04f;
+  padding: 1px;
+}
+.calendar thead .active { /* Active (pressed) buttons in header */
+  background: #77c;
+  padding: 2px 0px 0px 2px;
+}
+/* The body part -- contains all the days in month. */
+.calendar tbody .day { /* Cells <TD> containing month days dates */
+  width: 2em;
+  color: #456;
+  text-align: right;
+  padding: 2px 4px 2px 2px;
+}
+.calendar table .wn {
+  padding: 2px 3px 2px 2px;
+  border-right: 1px solid #000;
+  background: #bdf;
+}
+.calendar tbody .rowhilite td {
+  background: #def;
+}
+.calendar tbody .rowhilite td.wn {
+  background: #eef;
+}
+.calendar tbody td.hilite { /* Hovered cells <TD> */
+  background: #def;
+  padding: 1px 3px 1px 1px;
+  border: 1px solid #bbb;
+}
+.calendar tbody td.active { /* Active (pressed) cells <TD> */
+  background: #cde;
+  padding: 2px 2px 0px 2px;
+}
+.calendar tbody td.selected { /* Cell showing today date */
+  font-weight: bold;
+  border: 1px solid #000;
+  padding: 1px 3px 1px 1px;
+  background: #fff;
+  color: #000;
+}
+.calendar tbody td.weekend { /* Cells showing weekend days */
+  color: #a66;
+}
+.calendar tbody td.today { /* Cell showing selected date */
+  font-weight: bold;
+  color: #00f;
+}
+.calendar tbody .disabled { color: #999; }
+.calendar tbody .emptycell { /* Empty cells (the best is to hide them) */
+  visibility: hidden;
+}
+.calendar tbody .emptyrow { /* Empty row (some months need less than 6 rows) */
+  display: none;
+}
+/* The footer part -- status bar and "Close" button */
+.calendar tfoot .footrow { /* The <TR> in footer (only one right now) */
+  text-align: center;
+  background: #556;
+  color: #fff;
+}
+.calendar tfoot .ttip { /* Tooltip (status bar) cell <TD> */
+  background: #fff;
+  color: #445;
+  border-top: 1px solid #556;
+  padding: 1px;
+}
+.calendar tfoot .hilite { /* Hover style for buttons in footer */
+  background: #aaf;
+  border: 1px solid #04f;
+  color: #000;
+  padding: 1px;
+}
+.calendar tfoot .active { /* Active (pressed) style for buttons in footer */
+  background: #77c;
+  padding: 2px 0px 0px 2px;
+}
+/* Combo boxes (menus that display months/years for direct selection) */
+.combo {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 4em;
+  cursor: default;
+  border: 1px solid #655;
+  background: #def;
+  color: #000;
+  font-size: smaller;
+}
+.combo .label {
+  width: 100%;
+  text-align: center;
+}
+.combo .hilite {
+  background: #acf;
+}
+.combo .active {
+  border-top: 1px solid #46a;
+  border-bottom: 1px solid #46a;
+  background: #eef;
+  font-weight: bold;
+}

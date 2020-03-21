@@ -1,0 +1,137 @@
+ad_page_contract {
+    @author Mattia Righetti (mattiarighe@me.com)
+    @creation-date Saturday 11 January, 2014
+} {
+    {rows_per_page 30}
+    {offset 0}
+    {q ""}
+    {q_marca_id 0}
+    {q_tipo_id 0}
+    {oggetto_id 0}
+    {add 0}
+    {subtract 0}
+    subtract:optional
+    tipo_id:integer,optional
+    marca_id:integer,optional
+    orderby:optional
+    tipo_id:integer,optional
+}
+set user_id [ad_conn user_id]
+if {$user_id == 0} {
+   ad_returnredirect "login?return_url=/negetti/inventario-list"
+}
+if {$add == 1 && $oggetto ne ""} {
+    db_dml query "UPDATE neg_oggetto SET quantita = (SELECT COALESCE(quantita)+1 FROM neg_oggetto WHERE oggetto_id = :oggetto_id) WHERE oggetto_id = :oggetto_id"
+}
+if {$subtract == 1 && $oggetto ne ""} {
+    db_dml query "UPDATE neg_oggetto SET quantita = (SELECT COALESCE(quantita)-1 FROM neg_oggetto WHERE oggetto_id = :oggetto_id) WHERE oggetto_id = :oggetto_id"
+}
+set page_title "Inventario"
+set actions {"Aggiungi" inventario-gest "Aggiunge un nuovo oggetto all'inventario" "Stampa inventario" inventario-stamp "Stampa l'elenco di tutti gli oggetti in inventario."}
+source [ah::package_root -package_key ah-util]/paging-buttons.tcl
+set marca_id_options ""
+append marca_id_options "<option value=\"0\">Tutte</option>"
+db_foreach query "SELECT denominazione, marca_id FROM neg_marca ORDER BY denominazione" {
+    if {$q_marca_id == $marca_id} {
+	append marca_id_options "<option value=\"${marca_id}\" selected=\"selected\">${denominazione}</option>"
+    } else {
+	append marca_id_options "<option value=\"${marca_id}\">${denominazione}</option>"
+    }
+}
+set tipo_id_options ""
+append tipo_id_options "<option value=\"0\">Tutte</option>"
+db_foreach query "SELECT descrizione, tipo_id FROM neg_tipo ORDER BY descrizione" {
+    if {$q_tipo_id == $tipo_id} {
+	append tipo_id_options "<option value =\"${tipo_id}\" selected =\"selected\">${descrizione}</option>"
+    } else {
+	append tipo_id_options "<option value=\"${tipo_id}\">${descrizione}</option>"
+    }
+}
+template::list::create \
+    -name inventario \
+    -multirow inventario \
+    -actions $actions \
+    -elements {
+	tipologia {
+	    label "Tipologia"
+	}	
+	marca {
+	    label "Marca"
+	}
+	modello {
+	    label "Modello"
+	}
+	dimensione {
+	    label "Dimensione"
+	}
+	quantita {
+	    label "Q.tà"
+	}
+	prezzo {
+	    label "Prezzo"
+	}
+	add {
+	    link_url_col add_url
+	    display_template {<font size="6px">+</font>}
+	    link_html {title "Aggiungi uno in più"}
+	    sub_class narrow
+	}
+	subtract {
+	    link_url_col subtract_url
+	    display_template {<font size="6px">&ndash;</font>}
+	    link_html {title "Togline uno."}
+	    sub_class narrow
+	}
+        edit {
+            link_url_col edit_url
+            display_template {<img src="images/icona-edit.ico" width="20px" height="20px" border="0">}
+            link_html {title "Modifica oggetto." width="20px"}
+            sub_class narrow
+        }
+   	delete {
+	    link_url_col delete_url 
+	    display_template {<img src="images/icona-delete.ico" width="20px" height="20px" border="0">}
+	    link_html {title "Cancella oggetto." onClick "return(confirm('Sei davvero sicuro?'));" width="20px"}
+	    sub_class narrow
+	}
+    } \
+    -filters {
+	q {
+            hide_p 1
+            values {$q $q}
+            where_clause {o.descrizione||m.denominazione||o.modello||t.descrizione ILIKE '%$q%'}
+        }
+	rows_per_page {
+	    label "Righe"
+	    values {{Quindici 15} {Trenta 30} {Cento 100}}
+	    where_clause {1 = 1}
+	    default_value 30
+	}
+	tipo_id {
+	    hide_p 1
+	    where_clause {((o.tipo_id = :q_tipo_id AND :q_tipo_id <> 0) OR :q_tipo_id = 0)}
+	}
+	marca_id {
+	    hide_p 1
+	    where_clause {((o.marca_id = :q_marca_id AND :q_marca_id <> 0) OR :q_marca_id = 0)}
+	}
+    } \
+    -orderby {
+	default_value marca
+	marca {
+	    label "Marca"
+	    orderby m.denominazione
+	}
+    }
+db_multirow \
+    -extend {
+	edit_url
+	add_url
+	subtract_url
+	delete_url 
+    } inventario query "SELECT o.oggetto_id, o.quantita, o.prezzo, o.modello, o.dimensione, m.denominazione AS marca, t.descrizione AS tipologia FROM neg_oggetto o left outer join neg_tipo t on o.tipo_id = t.tipo_id left outer join neg_marca m on o.marca_id = m.marca_id LIMIT $rows_per_page OFFSET $offset" {
+			    set edit_url [export_vars -base "inventario-gest" {oggetto_id}]
+			    set add_url [export_vars -base "inventario-list?add=1&" {oggetto_id}]
+			    set subtract_url [export_vars -base "inventario-list?subtract=1&" {oggetto_id}]
+			    set delete_url [export_vars -base "inventario-canc" {oggetto_id}]
+		    }
